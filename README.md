@@ -19,6 +19,9 @@ development tools :
 design tools :
 - [figma](https://www.figma.com/)
 
+websites :
+- css clip-path maker [here](https://bennettfeely.com/clippy/)
+
 ## Resources
 
 figma basics: 
