@@ -12,7 +12,7 @@ For this project we try to set up an entire design using simple HTML/CSS skills 
 
 development tools : 
 
-- Code editor : [vscode](https://code.visualstudio.com/)
+- visual studio code
 - Vim 
 - emmet
 
