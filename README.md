@@ -27,4 +27,4 @@ https://www.youtube.com/watch?v=4W4LvJnNegA
 https://www.youtube.com/watch?v=Vo0sEPqArRQ
 
 ## Screenshots:
-![Desktop]()
+![Desktop](https://github.com/YassineChayrrou/holberton-headphones/blob/master/Design-prototypes/01_headphones_desktop%402x.png)
