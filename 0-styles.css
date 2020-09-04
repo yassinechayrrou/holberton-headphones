@@ -91,7 +91,7 @@ nav {
     left: 5%;
     width: 18px;
     height: 3px;
-    background: #A8B5C8;
+    background: var(--color-white);
     border-radius: 2px;
     transition: all .2s ease-in-out;
     cursor: pointer;
@@ -102,7 +102,7 @@ nav {
     position: absolute;
     width: 25px;
     height: 3px;
-    background: #A8B5C8;
+    background: var(--color-white);
     border-radius: 2px;
     transform: translateY(-8px);
     display: block;
@@ -116,7 +116,7 @@ nav {
     position: absolute;
     width: 25px;
     height: 3px;
-    background: #A8B5C8;
+    background: var(--color-white);
     border-radius: 5px;
     transform: translateY(8px);
     display: block;
