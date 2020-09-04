@@ -19,16 +19,16 @@ header {
     overflow: hidden;
     position: relative;
     display: flex;
+    align-items: center;
     flex-direction: column;
-
 }
 
 nav {
     display: flex;
+    width: 100%;
     justify-content: space-around;
     align-items: center;
     height: 100px;
-    margin: 27.76px;
 }
 
 .logo {
@@ -78,76 +78,77 @@ nav {
 } */
 
 /* Hamburger menu -----------------*/
+/* i think the menu-line span is totally wasted i only added it out of classical use */
 .h-menu {
     display: none;
 }
 
-
-.h-menu + .h-menu-button {
+.h-menu-button {
     display: none;
+}
+.h-menu + .h-menu-button .menu-line {
     position: absolute;
-    top: 75px;
     left: 5%;
     width: 18px;
-    height: 4px;
+    height: 3px;
     background: #A8B5C8;
     border-radius: 2px;
     transition: all .2s ease-in-out;
     cursor: pointer;
 }
 
-.h-menu + .h-menu-button::before {
+.h-menu + .h-menu-button .menu-line::before {
     content: '';
     position: absolute;
     width: 25px;
-    height: 4px;
+    height: 3px;
     background: #A8B5C8;
     border-radius: 2px;
     transform: translateY(-8px);
     display: block;
     transition: all .2s ease-in-out;
+    cursor: pointer;
 }
 
-
-.h-menu + .h-menu-button::after {
+.h-menu + .h-menu-button .menu-line::after {
     content: '';
     display: block;
     position: absolute;
     width: 25px;
-    height: 4px;
+    height: 3px;
     background: #A8B5C8;
     border-radius: 5px;
     transform: translateY(8px);
     display: block;
     transition: all .2s ease-in-out;
+    cursor: pointer;
 }
 
-.h-menu:checked + .h-menu-button {
+.h-menu:checked + .h-menu-button .menu-line {
     transform: translateX(-18px);
     background: transparent;
 }
 
-.h-menu:checked + .h-menu-button::before {
-    transform: rotate(45deg) translate(18px, -18px);
+.h-menu:checked + .h-menu-button .menu-line::before {
+    transform: rotate(45deg) translate(15px, -15px);
 }
 
-.h-menu:checked + .h-menu-button::after {
-    transform: rotate(-45deg) translate(18px, 18px);
+.h-menu:checked + .h-menu-button .menu-line::after {
+    transform: rotate(-45deg) translate(15px, 15px);
 }
 
 /* Header / Hero content */
 
 .container {
     display: flex;
+    width: 90%;
+    max-width: 672px; 
     position: absolute;
-    width: 50%;
+    top: 40%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     color: var(--color-white);
 }
 
@@ -155,7 +156,7 @@ nav {
     font-family: var(--header-font);
     font-style: normal;
     font-weight: bold;
-    font-size: 2.2vw;
+    font-size: 2rem;
     margin-bottom: 0;
 }
 
@@ -163,7 +164,7 @@ nav {
     font-family: var(--header-font);
     font-style: normal;
     font-weight: bold;
-    font-size: 1.1vw;
+    font-size: 1rem;
     margin-top: 5px;
 }
 
@@ -196,15 +197,65 @@ nav {
     font-family: var(--header-font);
     font-style: normal;
     font-weight: normal;
-    font-size: 1.2vw;
+    font-size: rem;
 }
 
 /* Responsive header Media queries */
-@media (max-width: 480px) {
-    .container {
-        top: 70%;
+
+@media only screen and (max-width: 765px) {
+    html {
+        font-size: 87.5%;
     }
+
     header {
-        height: 130vh;
+        background: url(./images/headphones_hero_1.jpg) no-repeat 35% 50% ; 
+    }
+
+    nav {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .h-menu + .h-menu-button + nav .nav-menu {
+        flex-direction: column;
+        justify-content: space-around;
+        display: none;
+    }
+
+    .h-menu:checked + .h-menu-button + nav .nav-menu {
+        display: flex;
+    }
+
+    .h-menu:checked + .h-menu-button + nav + .container {
+        top: 60%;
+    }
+    
+    .nav-menu .nav-item {
+        margin: 2rem;
+    }
+    
+    .logo {
+        margin-top: 20px;
+    }
+
+    .h-menu-button {
+        display: block;
+        position: absolute;
+        top: 5.7%; 
+        left: 10%;
+    }
+}
+
+@media only screen  and (max-width: 480px) {
+    html {
+        font-size: 87.5%;
+    }
+
+    .container {
+        top: 35%;
+    }
+
+    header {
+        background: url(./images/headphones_hero_1.jpg) no-repeat 35% 50% ; 
     }
 }
