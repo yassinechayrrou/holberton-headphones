@@ -8,6 +8,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* Header Hero Section ------------------------------------------- */
@@ -287,10 +288,26 @@ section {
 /* Responsive header Media queries 
 -------------------------------------------------------*/
 
-@media only screen and (max-width: 768px) {
-    html {
-        font-size: 87.5%;
+@media only screen and (max-width: 1044px) {
+    .section-grid-container {
+        grid-gap: 20px;
     }
+}
+
+
+@media only screen and (max-width: 900px) {
+
+    .section-grid-container {
+        grid-template-columns: repeat(2, 207px);
+        grid-template-rows: repeat(2, 179px);
+        grid-gap: 59px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* html {
+        font-size: 87.5%;
+    } */
 
     /* header {
         background: url(./images/headphones_hero_1.jpg) no-repeat 35% 50% ; 
@@ -330,16 +347,16 @@ section {
         left: 10%;
     }
 
-    .section-grid-container {
-        grid-template-columns: repeat(2, 207px);
-        grid-template-rows: repeat(2, 179px);
-    }
 }
 
 @media only screen  and (max-width: 480px) {
 
+     html {
+        font-size: 87.5%;
+    } 
+
     .container {
-        top: 35%;
+        top: 30%;
     }
 
     /* header {
@@ -351,3 +368,4 @@ section {
         grid-template-rows: 179px;
     }
 }
+
