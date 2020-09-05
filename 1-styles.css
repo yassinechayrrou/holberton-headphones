@@ -2,6 +2,7 @@
     --color-primary: #FF6565;
     --color-white: #FFFFFF;
     --header-font: Source Sans Pro;
+    --holberton-font: 'holberton_school-icon' !important;
 }
 
 html, body {
@@ -210,6 +211,7 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .section-container {
@@ -221,6 +223,7 @@ section {
     flex-direction: column;
     text-align: center;
     margin-top: 5rem;
+    margin-bottom: 6rem;
 }
 
 .section-container h1 {
@@ -238,14 +241,43 @@ section {
     line-height: 1.5rem;
 }
 
+.section-grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 207px);
+    grid-template-rows: repeat(4, 179px);
+    grid-gap: 58px;
+}
+
+.section-grid-container .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
 
 
+.section-grid-container .box.box-1 .icon::before {
+    content: "\e90e";
+}
 
+.section-grid-container .box.box-2 .icon::before {
+    content: "\e910";
+}
 
+.section-grid-container .box.box-3 .icon::before {
+    content: "\e90d";
+}
 
+.section-grid-container .box.box-4 .icon::before {
+    content: "\e909";
+}
 
-
-
+.section-grid-container .box .icon::before {
+    font-family: var(--holberton-font);
+    font-size: 5rem;
+    color: var(--color-primary);
+}
 
 
 
@@ -255,14 +287,14 @@ section {
 /* Responsive header Media queries 
 -------------------------------------------------------*/
 
-@media only screen and (max-width: 765px) {
+@media only screen and (max-width: 768px) {
     html {
         font-size: 87.5%;
     }
 
-    header {
+    /* header {
         background: url(./images/headphones_hero_1.jpg) no-repeat 35% 50% ; 
-    }
+    } */
 
     nav {
         flex-direction: column;
@@ -297,18 +329,25 @@ section {
         top: 5.7%; 
         left: 10%;
     }
+
+    .section-grid-container {
+        grid-template-columns: repeat(2, 207px);
+        grid-template-rows: repeat(2, 179px);
+    }
 }
 
 @media only screen  and (max-width: 480px) {
-    html {
-        font-size: 87.5%;
-    }
 
     .container {
         top: 35%;
     }
 
-    header {
+    /* header {
         background: url(./images/headphones_hero_1.jpg) no-repeat 35% 50% ; 
+    } */
+    
+    .section-grid-container {
+        grid-template-columns: 207px;
+        grid-template-rows: 179px;
     }
 }

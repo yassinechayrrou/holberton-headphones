@@ -207,9 +207,9 @@ nav {
         font-size: 87.5%;
     }
 
-    header {
+    /* header {
         background: url(./images/headphones_hero_1.jpg) no-repeat 35% 50% ; 
-    }
+    } */
 
     nav {
         flex-direction: column;
@@ -255,7 +255,7 @@ nav {
         top: 35%;
     }
 
-    header {
+    /* header {
         background: url(./images/headphones_hero_1.jpg) no-repeat 35% 50% ; 
-    }
+    } */
 }
