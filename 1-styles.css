@@ -197,10 +197,63 @@ nav {
     font-family: var(--header-font);
     font-style: normal;
     font-weight: normal;
-    font-size: rem;
+    font-size: 1rem;
 }
 
-/* Responsive header Media queries */
+/* What we do Section --------------
+------------------------------------------------------- */
+
+section {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section-container {
+    display: flex;
+    width: 90%;
+    max-width: 637px; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.section-container h1 {
+    font-family: var(--header-font);
+    font-size: 2rem;
+    line-height: .5rem;
+    color: #071629;
+}
+
+.section-container p {
+    font-family: var(--header-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive header Media queries 
+-------------------------------------------------------*/
 
 @media only screen and (max-width: 765px) {
     html {
