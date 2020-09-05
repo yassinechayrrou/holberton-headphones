@@ -309,9 +309,9 @@ section {
         font-size: 87.5%;
     } */
 
-    /* header {
-        background: url(./images/headphones_hero_1.jpg) no-repeat 35% 50% ; 
-    } */
+    header {
+        background: url(./images/headphones_hero_1.jpg) no-repeat 35% 0 ; 
+    }
 
     nav {
         flex-direction: column;
@@ -359,9 +359,9 @@ section {
         top: 30%;
     }
 
-    /* header {
-        background: url(./images/headphones_hero_1.jpg) no-repeat 35% 50% ; 
-    } */
+    header {
+        background: url(./images/headphones_hero_1.jpg) no-repeat 35% 0 ; 
+    }
     
     .section-grid-container {
         grid-template-columns: 207px;
