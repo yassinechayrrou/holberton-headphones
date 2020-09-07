@@ -325,6 +325,11 @@ nav {
     /* line-height: 1.5rem; */
     color: var(--color-white);
     margin-bottom: 40px;
+    transition: all .5s ease-out;
+}
+
+.section-results-container h1:hover {
+    font-size: 2.5rem;
 }
 
 .section-results-container p {
@@ -334,8 +339,14 @@ nav {
     font-size: 1rem;
     line-height: 1.2rem;
     color: var(--color-white);
+    cursor: pointer;
+    transition: .5s ease-in;
 }
 
+
+.section-results-container p:hover {
+    font-size: 1.2rem;
+}
 .polygon {
     clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
     background-color: var(--color-primary); 
@@ -348,6 +359,32 @@ nav {
     align-items: center;
     text-align: center;
     color: var(--color-white);
+    transition: all .5s ease-in;
+}
+
+.polygon:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 
 .polygon-text h1 {
