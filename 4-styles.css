@@ -431,7 +431,67 @@ div[class*="form-"] label {
 /* Home Page footer
 -------------------------------------------------------*/
 
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 249px;
+    width: 100%;
+    background: var(--color-black);
+    margin-top: 3rem;
+    position: relative;
+}
 
+.footer-logo {
+    width: 161px;
+    height: 32px;
+}
+
+.copyright {
+    font-family: var(--header-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 15px;
+    color: var(--color-white);
+    mix-blend-mode: normal;
+    opacity: 0.35;
+    position: absolute;
+    bottom: 10%;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: var(--holberton-font); 
+}
+
+.social-media a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.social-media .facebook::before {
+    content: "\e908";
+    font-size: 50px;
+    color: var(--color-white);
+    margin: 10px;
+}
+
+.social-media .twitter::before {
+    content: "\e90f";
+    font-size: 50px;
+    color: var(--color-white);
+    margin: 10px;
+}
+
+.social-media .instagram::before {
+    content: "\e90a";
+    font-size: 50px;
+    color: var(--color-white);
+    margin: 10px;
+}
 
 /* Responsive header Media queries 
 -------------------------------------------------------*/
@@ -544,6 +604,19 @@ div[class*="form-"] label {
 
     .section-contacts .form {
         width: 85%;
+    }
+
+    /*footer responsive */
+    footer {
+        flex-direction: column;
+    }
+    .social-media {
+        order: 2;
+    }
+
+    .copyright {
+        position: unset;
+        order: 3;
     }
 }
 
