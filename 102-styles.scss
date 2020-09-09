@@ -1,0 +1,669 @@
+:root {
+    --color-primary: #FF6565;
+    --color-white: #FFFFFF;
+    --color-black: #071629;
+    --header-font: Source Sans Pro;
+    --holberton-font: 'holberton_school-icon' !important;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Hero Section ------------------------------------------- */
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: url(./images/headphones_hero_1.jpg) no-repeat center; 
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+}
+
+.logo {
+    width: 180px;
+    height: 36px;
+}
+
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu .nav-item {
+    padding: 0 1rem;
+}
+
+.nav-menu .nav-item a {
+    text-decoration: none;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    color: var(--color-white);
+}
+
+
+.nav-menu .nav-item a:hover {
+    color: var(--color-primary);
+}
+
+/* Hamburger menu way in css without requiring extra span tags */
+/* .h-menu + .h-menu-button {
+    // this draws middle bars
+  background: linear-gradient(to right, #A8B5C8, #A8B5C8) no-repeat;
+  background-position: center left;
+  background-size: 70% 2px;
+  // this draws top and buttom bars
+  border: solid #A8B5C8;
+  border-width: 2px 0;
+  height: 10px;
+  width: 18px;
+  position: absolute;
+  top: 72px; 
+  left: 5%;
+  cursor: pointer;
+} */
+
+/* Hamburger menu -----------------*/
+/* i think the menu-line span is totally wasted i only added it out of classical use */
+.h-menu {
+    display: none;
+}
+
+.h-menu-button {
+    display: none;
+}
+.h-menu + .h-menu-button .menu-line {
+    position: absolute;
+    left: 5%;
+    width: 18px;
+    height: 3px;
+    background: var(--color-white);
+    border-radius: 2px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.h-menu + .h-menu-button .menu-line::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: var(--color-white);
+    border-radius: 2px;
+    transform: translateY(-8px);
+    display: block;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.h-menu + .h-menu-button .menu-line::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: var(--color-white);
+    border-radius: 5px;
+    transform: translateY(8px);
+    display: block;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.h-menu:checked + .h-menu-button .menu-line {
+    transform: translateX(-18px);
+    background: transparent;
+}
+
+.h-menu:checked + .h-menu-button .menu-line::before {
+    transform: rotate(45deg) translate(15px, -15px);
+}
+
+.h-menu:checked + .h-menu-button .menu-line::after {
+    transform: rotate(-45deg) translate(15px, 15px);
+}
+
+/* Header / Hero content */
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 672px; 
+    position: absolute;
+    top: 40%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: var(--color-white);
+}
+
+.container h1 {
+    font-family: var(--header-font);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.container h3 {
+    font-family: var(--header-font);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.action-button {
+    width: 180px;
+    height: 50px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    text-decoration: none;
+    font-family: var(--header-font);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--color-white);
+
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-primary);
+    border-radius: 26px;
+    filter: drop-shadow(0px 2px 20px rgba(0, 0, 0, 0.5));
+}
+
+.action-button:hover {
+    background:  rgba(255, 101, 101, 0.88);
+}
+
+.container p {
+    font-family: var(--header-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+/* What we do Section --------------
+------------------------------------------------------- */
+
+.whatwedo-section {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    margin-bottom: 6rem;
+    transition: all .7s ease-in-out;
+}
+.whatwedo-section:hover {
+    background-color: pink;
+    margin-bottom: 0;
+}
+
+.section-container {
+    display: flex;
+    width: 90%;
+    max-width: 637px; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 6rem;
+}
+
+.section-container h1 {
+    font-family: var(--header-font);
+    font-size: 2rem;
+    line-height: .5rem;
+    color: #071629;
+}
+
+.section-container p {
+    font-family: var(--header-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.section-grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 207px);
+    grid-template-rows: 179px;
+    grid-gap: 58px;
+    margin-bottom: 1rem;
+}
+
+.section-grid-container .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.section-grid-container .box.box-1 .icon::before {
+    content: "\e90e";
+    transition: all 1s ease;
+}
+
+.section-grid-container .box.box-1 .icon::before {
+    transform: rotate(45deg);
+}
+.section-grid-container .box.box-2 .icon::before {
+    content: "\e910";
+}
+
+.section-grid-container .box.box-3 .icon::before {
+    content: "\e90d";
+}
+
+.section-grid-container .box.box-4 .icon::before {
+    content: "\e909";
+}
+
+.section-grid-container .box .icon::before {
+    font-family: var(--holberton-font);
+    font-size: 5rem;
+    color: var(--color-primary);
+}
+
+
+/* Our results Section 
+------------------------------------------------------- */
+
+.section-results {
+    display: flex;
+    width: 100%;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url(./images/headphones_hero_2.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.section-results-container {
+    display: flex;
+    width: 90%;
+    max-width: 637px; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 6rem;
+}
+
+.section-results-container h1 {
+    font-family: var(--header-font);
+    font-size: 2rem;
+    /* line-height: 1.5rem; */
+    color: var(--color-white);
+    margin-bottom: 40px;
+    transition: all .5s ease-out;
+}
+
+.section-results-container h1:hover {
+    font-size: 2.5rem;
+}
+
+.section-results-container p {
+    font-family: var(--header-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    color: var(--color-white);
+    cursor: pointer;
+    transition: .5s ease-in;
+}
+
+
+.section-results-container p:hover {
+    font-size: 1.2rem;
+}
+.polygon {
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    background-color: var(--color-primary); 
+    background-size: 190px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--color-white);
+    transition: all .5s ease-in;
+}
+
+.polygon:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.polygon-text h1 {
+    margin-bottom: 1px;
+    font-family: var(--header-font);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 46px;
+    line-height: 26px;
+}
+
+
+.polygon-text p {
+    margin-top: 1px;
+}
+
+.section-results-grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 190px);
+    grid-template-rows: 190px;
+    grid-gap: 76px;
+}
+
+/* Contacts section
+-------------------------------------------------------*/
+
+.section-contacts {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 70vh;
+}
+
+.section-contacts .form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 50%;
+    height: 60vh;
+}
+
+.section-contacts h1 {
+    font-family: var(--header-font);
+    font-size: 3rem;
+}
+
+div[class*="form-"] {
+    width: 100%;
+    height: 50px;
+    margin: 1rem;
+    position: relative;
+}
+
+div[class*="form-"] input{
+    height: 50%;
+    width: 100%;
+    color: var(--color-black);
+    padding-top: 20px;
+    border: none;
+}
+
+div[class*="form-"] label {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid rgba(7, 22, 41, 0.17);
+    font-family: var(--header-font);
+}
+
+.submit-button {
+    height: 50px;
+    width: 164px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 25px;
+    border: none;
+    margin: 1rem auto;
+    margin-top: 2rem;
+    font-family: var(--header-font);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+/* Home Page footer
+-------------------------------------------------------*/
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 249px;
+    width: 100%;
+    background: var(--color-black);
+    margin-top: 3rem;
+    position: relative;
+}
+
+.footer-logo {
+    width: 161px;
+    height: 32px;
+}
+
+.copyright {
+    font-family: var(--header-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 15px;
+    color: var(--color-white);
+    mix-blend-mode: normal;
+    opacity: 0.35;
+    position: absolute;
+    bottom: 10%;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: var(--holberton-font); 
+}
+
+.social-media a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.social-media .facebook::before {
+    content: "\e908";
+    font-size: 50px;
+    color: var(--color-white);
+    margin: 10px;
+}
+
+.social-media .twitter::before {
+    content: "\e90f";
+    font-size: 50px;
+    color: var(--color-white);
+    margin: 10px;
+}
+
+.social-media .instagram::before {
+    content: "\e90a";
+    font-size: 50px;
+    color: var(--color-white);
+    margin: 10px;
+}
+
+/* Responsive header Media queries 
+-------------------------------------------------------*/
+
+@media only screen and (max-width: 1044px) {
+    .section-grid-container {
+        grid-gap: 20px;
+    }
+    .section-results-grid-container {
+        grid-gap: 50px;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    
+    .section-results {
+        height: 1000px;
+    }
+
+    .section-grid-container {
+        grid-template-columns: repeat(2, 207px);
+        grid-template-rows: repeat(2, 179px);
+        grid-gap: 59px;
+    }
+    .section-results-grid-container {
+        grid-template-columns: repeat(2, 190px);
+        grid-template-rows: repeat(2, 190px);
+        grid-gap: 75px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* html {
+        font-size: 87.5%;
+    } */
+
+    header {
+        background: url(./images/headphones_hero_1.jpg) no-repeat 35% 0 ; 
+    }
+
+    nav {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .h-menu + .h-menu-button + nav .nav-menu {
+        flex-direction: column;
+        justify-content: space-around;
+        display: none;
+    }
+
+    .h-menu:checked + .h-menu-button + nav .nav-menu {
+        display: flex;
+    }
+
+    .h-menu:checked + .h-menu-button + nav + .container {
+        top: 60%;
+    }
+    
+    .nav-menu .nav-item {
+        margin: 2rem;
+    }
+    
+    .logo {
+        margin-top: 20px;
+    }
+
+    .h-menu-button {
+        display: block;
+        position: absolute;
+        top: 5.7%; 
+        left: 10%;
+    }
+
+}
+
+@media only screen  and (max-width: 480px) {
+
+     html {
+        font-size: 87.5%;
+    } 
+
+    .container {
+        top: 30%;
+    }
+
+    header {
+        background: url(./images/headphones_hero_1.jpg) no-repeat 35% 0 ; 
+    }
+    
+    .section-grid-container {
+        grid-template-columns: 207px;
+        grid-template-rows: 179px;
+    }
+
+    .section-results {
+        height: 1500px;
+    }
+
+    .polygon {
+        height: 190px;
+    }
+
+    .section-results-grid-container {
+        grid-template-columns: 190px;
+        grid-template-rows: 190px;
+        grid-gap: 42px;
+    }
+
+    .section-contacts .form {
+        width: 85%;
+    }
+
+    /*footer responsive */
+    footer {
+        flex-direction: column;
+    }
+    .social-media {
+        order: 2;
+    }
+
+    .copyright {
+        position: unset;
+        order: 3;
+    }
+}
+
