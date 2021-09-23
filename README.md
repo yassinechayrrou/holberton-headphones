@@ -32,3 +32,6 @@ tips : https://www.youtube.com/watch?v=Vo0sEPqArRQ
 
 ## Screenshots:
 ![Desktop](https://github.com/YassineChayrrou/holberton-headphones/blob/master/Design-prototypes/01_headphones_desktop%402x.png)
+
+## Author:
+Yassine Chayrrou
